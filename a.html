@@ -1,4 +1,4 @@
-<!doctype html>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -118,3 +118,72 @@ to retrieve it easily during ALS inizialization -->
 
     </body>
 </html>
+
+<div id="notifications" class="container-fluid overflow-auto">
+
+  <h4>Notifications</h4>
+  
+  <div class="list-group">
+    <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+      <h6 class="mb-1">Message</h6>
+      <small>3 days ago</small>
+      </div>
+      <small>Donec id elit non mi porta.</small>
+    </a>
+    <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+      <h6 class="mb-1">Task assigned</h6>
+      <small class="text-muted">3 days ago</small>
+      </div>
+      <small class="text-muted">Donec id elit non mi porta.</small>
+    </a>
+    <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+      <h6 class="mb-1">Project join Request</h6>
+      <small class="text-muted">3 days ago</small>
+      </div>
+      <small class="text-muted">Donec id elit non mi porta.</small>
+    </a>
+    <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+      <h6 class="mb-1">Message</h6>
+      <small>3 days ago</small>
+      </div>
+      <small>Donec id elit non mi porta.</small>
+    </a>
+    <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+      <h6 class="mb-1">Task assigned</h6>
+      <small class="text-muted">3 days ago</small>
+      </div>
+      <small class="text-muted">Donec id elit non mi porta.</small>
+    </a>
+    <a href="" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+      <h6 class="mb-1">Project join Request</h6>
+      <small class="text-muted">3 days ago</small>
+      </div>
+      <small class="text-muted">Donec id elit non mi porta.</small>
+    </a>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+		
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+  if (document.body.scrollTop >= 220 || document.documentElement.scrollTop >= 220) {
+    document.getElementById("notifications").style.position = "fixed";
+    document.getElementById("notifications").style.top = "140px";
+    document.getElementById("notifications").style.left = "957px";
+  } else {
+    document.getElementById("notifications").style.position = "relative";
+    document.getElementById("notifications").style.top = "auto";
+    document.getElementById("notifications").style.left = "auto";
+    
+  }
+  }
+
+</script>

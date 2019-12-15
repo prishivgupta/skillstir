@@ -85,21 +85,40 @@
 				float: left;
 			}
 
-			#leftContainer {
-				width:65%;
-				float:left;
-				padding-left: 160px;
+			#rightContainer {
+				width:80%;
+				padding:0px 40px;
 			}
 
 			#notifications {
-				width:25%;
-				background-color: #ffffff;
-				padding: 15px;
-				border-radius: 7px;
+				width:20%;
 				height: 300px;
+				float:left;
 				position: relative;
-				top:auto;
-				left:auto;
+				opacity: 0;
+    			transition: opacity 0.6s;
+				font-family:helvetica;
+				font-weight: bold;
+			}
+
+			#notifications button {
+				font-family:helvetica;
+				font-weight: bold;
+			}
+
+			.left {
+				position: relative;
+				left:87px;
+			}
+
+			#notifications small {
+				position: relative;
+				left:40px;
+			}
+
+			#notifications div button{
+				position: relative;
+				left:23px;
 			}
 
 			::-webkit-scrollbar {
@@ -116,6 +135,16 @@
 				width:150px;
 				height: 150px;
 			}
+
+			#profilePic2 {
+				border-radius: 50%;
+				width:125px;
+				height: 125px;
+				position: relative;
+				left:84px;
+			}
+
+			
 
 			#bio {
 				background-color: #ffffff;
@@ -140,8 +169,6 @@
 				padding-bottom: 30px;
 				margin-bottom:10px;
 			}
-
-			
 
 			.edit {
 				float: right;
@@ -234,7 +261,7 @@
 		</div>
 		
 		<!-- Page Content  -->
-		<div id="leftContainer" class="container-fluid">
+		<div id="rightContainer" class="container-fluid">
 			<div id="bio" class="container-fluid">
 		
 				<div>
@@ -253,7 +280,7 @@
 				
 		
 			</div>
-			<div id="skills"class="container-fluid">
+			<div id="skills"class="container-fluid overflow-auto">
 		
 				<div>
 					<h3>Skills</h3>
@@ -361,59 +388,18 @@
 				
 			</div>
 		</div>
-
 		<div id="notifications" class="container-fluid overflow-auto">
 
-			<h4>Notifications</h4>
-			
-			<div class="list-group">
-				<a href="" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-					<h6 class="mb-1">Message</h6>
-					<small>3 days ago</small>
-					</div>
-					<small>Donec id elit non mi porta.</small>
-				</a>
-				<a href="" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-					<h6 class="mb-1">Task assigned</h6>
-					<small class="text-muted">3 days ago</small>
-					</div>
-					<small class="text-muted">Donec id elit non mi porta.</small>
-				</a>
-				<a href="" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-					<h6 class="mb-1">Project join Request</h6>
-					<small class="text-muted">3 days ago</small>
-					</div>
-					<small class="text-muted">Donec id elit non mi porta.</small>
-				</a>
-				<a href="" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-					<h6 class="mb-1">Message</h6>
-					<small>3 days ago</small>
-					</div>
-					<small>Donec id elit non mi porta.</small>
-				</a>
-				<a href="" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-					<h6 class="mb-1">Task assigned</h6>
-					<small class="text-muted">3 days ago</small>
-					</div>
-					<small class="text-muted">Donec id elit non mi porta.</small>
-				</a>
-				<a href="" class="list-group-item list-group-item-action flex-column align-items-start">
-					<div class="d-flex w-100 justify-content-between">
-					<h6 class="mb-1">Project join Request</h6>
-					<small class="text-muted">3 days ago</small>
-					</div>
-					<small class="text-muted">Donec id elit non mi porta.</small>
-				</a>
+			<img id="profilePic2" src="asset/profilePic.png" >
+			<div class="left">
+				<p>Prishiv Gupta<br><small style>India</small></p>
 			</div>
-		
+			<div id="followButtons2" class="container-fluid">
+				<button type="button" class="btn">Followers<br><span>100</span></button>
+				<button type="button" class="btn">Following<br><span>100</span></button>
+			</div>
+			
 		</div>
-		
-
 		
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
@@ -432,18 +418,23 @@
 		
 			window.onscroll = function() {scrollFunction()};
 			function scrollFunction() {
-			if (document.body.scrollTop >= 220 || document.documentElement.scrollTop >= 220) {
+			if (document.body.scrollTop >= 250 || document.documentElement.scrollTop >= 250) {
 				document.getElementById("notifications").style.position = "fixed";
-				document.getElementById("notifications").style.top = "140px";
-				document.getElementById("notifications").style.left = "957px";
+				document.getElementById("notifications").style.top = "120px";
+				document.getElementById("notifications").style.opacity = "1";
+				document.getElementById("rightContainer").style.width = "80%";
+				document.getElementById("rightContainer").style.float = "right";
+				
 			} else {
 				document.getElementById("notifications").style.position = "relative";
 				document.getElementById("notifications").style.top = "auto";
 				document.getElementById("notifications").style.left = "auto";
-				
+				document.getElementById("notifications").style.opacity = "0";
+				document.getElementById("rightContainer").style.width = "80%";
+				document.getElementById("rightContainer").style.float = "none";
 			}
 			}
-
+		
 		</script>
 	
 	</body>
