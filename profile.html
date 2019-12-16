@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+		<link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+
 		<title>Profile</title>
 		
 		<style type="text/css">
@@ -18,56 +20,27 @@
 			body {
 			background-color: #fafafa;
 			}
-			.navbar {
-				padding: 15px 10px;
-				background: #fff;
-				border: none;
-				border-radius: 0;
-				margin-bottom: 40px;
-				box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-			}
-
-			.navbar-btn {
-				box-shadow: none;
-				outline: none !important;
-				border: none;
-			}
-
-			.line {
-				width: 100%;
-				height: 1px;
-				border-bottom: 1px dashed #ddd;
-				margin: 40px 0;
-			}
 
 			/* ---------------------------------------------------
 				CONTENT STYLE
 			----------------------------------------------------- */
 
 			#profileBar {
-				overflow: hidden;
-				background-color: #9bb5cf;
-				padding: 30px 20px; /* Large padding which will shrink on scroll (using JS) */
-				transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-				 /* Sticky/fixed navbar */
-				margin-top:90px;
+				background-color: #fafafa;
+				transition: 0.4s;
+				margin-top:70px;
+				margin-bottom:20px;
 				width: 100%;
-				z-index: 99;
 				border:1px solid rgb(235, 235, 235);
+				padding:40px 60px;
 			}
 
 			#profileBar button {
-				margin-right: 10px;
-				border-radius: 100px;
+				border-radius: 5px;
 			}
 
 			#profileBar button span{
 				margin-right: 5px;
-			}
-
-			#name {
-				color: white;
-				
 			}
 
 			#rightContainer h3 {
@@ -77,6 +50,7 @@
 			#rightContainer {
 				width:80%;
 				padding:0px 40px;
+				transition: 2s;
 			}
 
 			#notifications {
@@ -100,6 +74,13 @@
 				left:87px;
 			}
 
+			.textColour {
+				color: #37353b;
+			}
+			.font {
+				font-family: 'Bree Serif', serif;
+			}
+
 			#notifications small {
 				position: relative;
 				left:40px;
@@ -110,19 +91,22 @@
 				left:23px;
 			}
 
-			::-webkit-scrollbar {
-				display: none;
-			}
-
 			.flex-container {
 				display: flex;
 				flex-direction: column;
 			}
 
 			#profilePic {
-				border-radius: 50%;
-				width:150px;
-				height: 150px;
+				background-color: #9bb5cf;
+				border-radius:10px;
+				width:160px;
+				height: 160px;
+				margin-right: 40px;
+			}
+
+			#followButtons {
+				position: relative;
+				left:-12px;
 			}
 
 			#profilePic2 {
@@ -132,8 +116,6 @@
 				position: relative;
 				left:84px;
 			}
-
-			
 
 			#bio {
 				background-color: #ffffff;
@@ -154,6 +136,11 @@
 				padding: 20px;
 				margin-bottom:10px;
 				border:1px solid rgb(235, 235, 235);
+			}
+
+			.infoIcon {
+				width:20px;
+				height:20px;
 			}
 
 			.edit {
@@ -228,22 +215,22 @@
 
 		<!-- Profile Bar  -->
 
-		<div class="container-fluid">
+		<div id="profileBar" class="jumbotron jumbotron-fluid">
 
-			<nav id="profileBar" class="navbar">
-				<div class="container-fluid">
+			<img id="profilePic" class="float-left" src="asset/profilePic/profile1.png" >
 
-					<h1 id="name" class="display-4">Prishiv Gupta</h1>
-					
-					<img id="profilePic" src="asset/profilePic.png" >
+			<div class="container-fluid">
+				<h1 class="textColour font">Prishiv Gupta</h1>
+				<p class="font text-muted"> <img class="infoIcon" src="asset/atTheRate.png"> prishivgupta 
+								<br>		<img class="infoIcon" src="asset/location.png"> Jammu,India</p>
+				
+			</div>
 
-					<div id="followButtons" class="container-fluid">
-						<button type="button" class="btn"><span>100</span>Followers</button>
-						<button type="button" class="btn"><span>100</span>Following</button>
-					</div>
-					
-				</div>
-			</nav>
+			<div id="followButtons" class="container-fluid">
+				<button type="button" class="btn text-muted font-weight-bold"><span>2</span>Posts</button>
+				<button type="button" class="btn text-muted font-weight-bold"><span>100</span>Followers</button>
+				<button type="button" class="btn text-muted font-weight-bold"><span>100</span>Following</button>
+			</div>
 
 		</div>
 		
@@ -377,7 +364,7 @@
 		</div>
 		<div id="notifications" class="container-fluid overflow-auto">
 
-			<img id="profilePic2" src="asset/profilePic.png" >
+			<img id="profilePic2" src="asset/profilePic/profile1.png" >
 			<div class="left">
 				<p>Prishiv Gupta<br><small style>India</small></p>
 			</div>
