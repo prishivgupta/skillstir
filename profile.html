@@ -46,7 +46,7 @@
 				margin-right: 5px;
 			}
 
-			#rightContainer h3 {
+			#rightContainer h2 {
 				float: left;
 			}
 
@@ -157,22 +157,27 @@
 			}
 
 			.skillCard {
-				height: 150px;
-				width:140px;
+				height: 140px;
+				width:110px;
 				border-radius:20px;
+				border:none;
+				background-color: #fafafa;
+				border:1px solid #e9e8e8;
 			}
 
 			.skillName {
 				position: relative;
-				top:40px;
+				top:30px;
 			}
 
 			.skillImg {
-				height:54px;
-				width:54px;
-				position: relative;
-				left:20px;
-				top:20px;
+				height:50px;
+				width:50px;
+				position: absolute;
+    			top: 20px;
+    			bottom: 0;
+    			margin: auto;
+				
 			}
 			
 		</style>
@@ -244,7 +249,7 @@
 			<div id="bio" class="container-fluid">
 		
 				<div>
-					<h3>Bio</h3>
+					<h2 class="font">Bio</h2>
 					<input type="image" class="edit" src="asset/edit.png" alt="Submit">
 				</div>
 				<br>
@@ -262,7 +267,7 @@
 			<div id="skills"class="container-fluid overflow-auto">
 		
 				<div>
-					<h3 class="font">Skills</h3>
+					<h2 class="font">Skills</h3>
 					<input type="image" class="edit" src="asset/edit.png" alt="Submit">
 				</div>
 				<br>
@@ -273,74 +278,74 @@
 						<div class="als-viewport">
 							<ul class="als-wrapper">
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/python.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">Python</p>
+											<p class="text-center skillName font-weight-bold ">Python</p>
 										</div>
 									</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/html5.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">HTML</p>
+											<p class="text-center skillName font-weight-bold">HTML</p>
 										</div>
 									</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/c++.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">C++</p>
+											<p class="text-center skillName font-weight-bold">C++</p>
 										</div>
 									</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/python.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">Python</p>
+											<p class="text-center skillName font-weight-bold">Python</p>
 										</div>
 									</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/html5.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">HTML</p>
+											<p class="text-center skillName font-weight-bold">HTML</p>
 										</div>
 									</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/c++.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">C++</p>
+											<p class="text-center skillName font-weight-bold">C++</p>
 										</div>
 									</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/python.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">Python</p>
+											<p class="text-center skillName font-weight-bold">Python</p>
 										</div>
 									</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/html5.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">HTML</p>
+											<p class="text-center skillName font-weight-bold">HTML</p>
 										</div>
 									</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard">
+									<div class="card skillCard shadow-sm">
 										<img class="card-img-top skillImg" src="asset/c++.png" alt="Card image cap">
 										<div class="card-body">
-											<p class="text-center skillName">C++</p>
+											<p class="text-center skillName font-weight-bold">C++</p>
 										</div>
 									</div>
 								</li>
@@ -354,7 +359,7 @@
 			<div id="projects"class="container-fluid">
 		
 				<div>
-					<h3>Projects</h3>
+					<h2 class="font">Projects</h2>
 					<input type="image" class="edit" src="asset/edit.png" alt="Submit">
 				</div>
 				<br>
@@ -416,7 +421,7 @@
 			$(document).ready(function() 
 			{
 				$("#lista1").als({
-					visible_items: 4,
+					visible_items: 5,
 					scrolling_items: 4,
 					orientation: "horizontal",
 					circular: "yes",
