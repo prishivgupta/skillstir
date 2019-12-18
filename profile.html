@@ -140,7 +140,7 @@
 
 			#projects {
 				background-color: #ffffff;
-				padding: 20px;
+				padding: 20px 40px;
 				margin-bottom:10px;
 				border:1px solid rgb(235, 235, 235);
 			}
@@ -181,8 +181,8 @@
 			}
 			
 			.skillCardEdit {
-				height: 140px;
-				width:110px;
+				height: 160px;
+				width:125px;
 				border-radius:20px;
 				border:none;
 				background-color: #fafafa;
@@ -274,10 +274,30 @@
 		
 				<div>
 					<h2 class="font">Bio</h2>
-					<input type="image" class="edit" src="asset/edit.png" alt="Submit">
+					<input type="image" class="edit" src="asset/edit.png" data-toggle="modal" data-target="#bioEdit">
 				</div>
 				<br>
 				<br>
+				<div class="modal fade" id="bioEdit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel">Edit Bio</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary">Save Changes</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<ul class="list-group list-group-flush"></ul>
 					<li>Cras justo odio</li>
 					<li>Dapibus ac facilisis in</li>
@@ -292,11 +312,11 @@
 		
 				<div>
 					<h2 class="font">Skills</h3>
-					<input type="image" class="edit" src="asset/edit.png" data-toggle="modal" data-target="#staticBackdrop">
+					<input type="image" class="edit" src="asset/edit.png" data-toggle="modal" data-target="#skillEdit">
 				</div>
 				<br>
 				
-				<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal fade" id="skillEdit" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-scrollable" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -307,60 +327,108 @@
 							</div>
 							<div class="modal-body">
 								<div class="container-fluid">
-									<div class="row p-4">
-										<div class="col-sm-4 mb-4">
-											<div class="card skillCardEdit">
-												<img class="card-img-top skillImgEdit" src="asset/python.png" alt="Card image cap">
+									<div class="row p-3">
+										<div class="col-sm-4">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/python.png" alt="Card image cap">
 												<div class="card-body">
 													<p class="text-center skillNameEdit font-weight-bold ">Python</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-4">
-											<div class="card skillCardEdit mb-4">
-												<img class="card-img-top skillImgEdit" src="asset/html5.png" alt="Card image cap">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/html5.png" alt="Card image cap">
 												<div class="card-body">
 													<p class="text-center skillName font-weight-bold">HTML</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-4">
-											<div class="card skillCardEdit mb-4">
-												<img class="card-img-top skillImgEdit" src="asset/c++.png" alt="Card image cap">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/c++.png" alt="Card image cap">
 												<div class="card-body">
 													<p class="text-center skillName font-weight-bold">C++</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-4">
-											<div class="card skillCardEdit mb-4">
-												<img class="card-img-top skillImgEdit" src="asset/python.png" alt="Card image cap">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/ai.png" alt="Card image cap">
 												<div class="card-body">
-													<p class="text-center skillName font-weight-bold ">Python</p>
+													<p class="text-center skillName font-weight-bold ">Adobe Illustrator</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-4">
-											<div class="card skillCardEdit mb-4">
-												<img class="card-img-top skillImgEdit" src="asset/html5.png" alt="Card image cap">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/android.png" alt="Card image cap">
 												<div class="card-body">
-													<p class="text-center skillName font-weight-bold">HTML</p>
+													<p class="text-center skillName font-weight-bold">Android</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-4">
-											<div class="card skillCardEdit mb-4">
-												<img class="card-img-top skillImgEdit" src="asset/c++.png" alt="Card image cap">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/edm.png" alt="Card image cap">
 												<div class="card-body">
-													<p class="text-center skillName font-weight-bold">C++</p>
+													<p class="text-center skillName font-weight-bold">EDM</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-4">
-											<div class="card skillCardEdit mb-4">
-												<img class="card-img-top skillImgEdit" src="asset/python.png" alt="Card image cap">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/ios.png" alt="Card image cap">
 												<div class="card-body">
-													<p class="text-center skillName font-weight-bold ">Python</p>
+													<p class="text-center skillName font-weight-bold ">IOS</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/java.png" alt="Card image cap">
+												<div class="card-body">
+													<p class="text-center skillName font-weight-bold ">Java</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/lightroom.png" alt="Card image cap">
+												<div class="card-body">
+													<p class="text-center skillName font-weight-bold ">Lightroom</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/ml.png" alt="Card image cap">
+												<div class="card-body">
+													<p class="text-center skillName font-weight-bold ">Machine Learning</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/photoshop.png" alt="Card image cap">
+												<div class="card-body">
+													<p class="text-center skillName font-weight-bold ">Photoshop</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/sketch.png" alt="Card image cap">
+												<div class="card-body">
+													<p class="text-center skillName font-weight-bold ">Sketch</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="card skillCardEdit mb-3">
+												<img class="card-img-top skillImgEdit" src="asset/skills/unity.png" alt="Card image cap">
+												<div class="card-body">
+													<p class="text-center skillName font-weight-bold ">Unity</p>
 												</div>
 											</div>
 										</div>
@@ -382,7 +450,7 @@
 							<ul class="als-wrapper">
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/python.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/python.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold ">Python</p>
 										</div>
@@ -390,7 +458,7 @@
 								</li>
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/html5.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/html5.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold">HTML</p>
 										</div>
@@ -398,7 +466,7 @@
 								</li>
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/c++.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/c++.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold">C++</p>
 										</div>
@@ -406,7 +474,7 @@
 								</li>
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/python.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/android.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold">Python</p>
 										</div>
@@ -414,7 +482,7 @@
 								</li>
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/html5.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/java.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold">HTML</p>
 										</div>
@@ -422,7 +490,7 @@
 								</li>
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/c++.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/sketch.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold">C++</p>
 										</div>
@@ -430,7 +498,7 @@
 								</li>
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/python.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/ml.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold">Python</p>
 										</div>
@@ -438,7 +506,7 @@
 								</li>
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/html5.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/photoshop.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold">HTML</p>
 										</div>
@@ -446,7 +514,7 @@
 								</li>
 								<li class="als-item">
 									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/c++.png" alt="Card image cap">
+										<img class="card-img-top skillImg" src="asset/skills/ai.png" alt="Card image cap">
 										<div class="card-body">
 											<p class="text-center skillName font-weight-bold">C++</p>
 										</div>
@@ -466,6 +534,58 @@
 				</div>
 				<br>
 				<br>
+				<br>
+
+				<div class="row">
+					<div class="col-4 mb-4">
+						<div class="card h-100">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 mb-4">
+						<div class="card h-100">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 mb-4">
+						<div class="card h-100">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col-4 mb-4">
+						<div class="card h-100">
+							<img src="..." class="card-img-top" alt="...">
+							<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 			</div>
 		</div>
