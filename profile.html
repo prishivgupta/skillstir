@@ -205,6 +205,8 @@
 			}
 
 		</style>
+		<script type="text/javascript" src="javascript/dashboard.js"></script>
+		
 	
 	</head>
   
@@ -254,16 +256,16 @@
 			<img id="profilePic" class="float-left" src="asset/profilePic/profile1.png" >
 
 			<div class="container-fluid">
-				<h1 class="textColour font">Prishiv Gupta</h1>
-				<p class="font text-muted"> <img class="infoIcon" src="asset/atTheRate.png"> prishivgupta 
-								<br>		<img class="infoIcon" src="asset/location.png"> Jammu,India</p>
+				<h1 class="textColour font" class="pname"></h1>
+				<p class="font text-muted"> <img class="infoIcon" src="asset/atTheRate.png"> <span id="puid"></span> 
+								<br>		<img class="infoIcon" src="asset/location.png"><span id="loc"></span></p>
 				
 			</div>
 
 			<div id="followButtons" class="container-fluid">
-				<button type="button" class="btn text-muted font-weight-bold"><span>2</span>Posts</button>
-				<button type="button" class="btn text-muted font-weight-bold"><span>100</span>Followers</button>
-				<button type="button" class="btn text-muted font-weight-bold"><span>100</span>Following</button>
+				<button type="button" class="btn text-muted font-weight-bold" ><span id="ppost"></span>Posts</button>
+				<button type="button" class="btn text-muted font-weight-bold " ><span id="pfoll"></span>Followers</button>
+				<button type="button" class="btn text-muted font-weight-bold " ><span id="pings"></span>Following</button>
 			</div>
 
 		</div>
@@ -288,22 +290,17 @@
 							</button>
 							</div>
 							<div class="modal-body">
-								
+								<input type="text" width="80%" id="bioed" />
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary">Save Changes</button>
+								<button type="button" class="btn btn-primary" onclick="chnbio()">Save Changes</button>
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<ul class="list-group list-group-flush"></ul>
-					<li>Cras justo odio</li>
-					<li>Dapibus ac facilisis in</li>
-					<li>Morbi leo risus</li>
-					<li>Porta ac consectetur ac</li>
-					<li>Vestibulum at eros</li>
+				<ul class="list-group list-group-flush" id="bio"></ul>
 				</ul>
 				
 		
@@ -443,83 +440,31 @@
 					</div>
 				</div>
 				
+				
+
 				<section id="content">
 					<div id="lista1" class="als-container">
 						<span class="als-prev"><img src="asset/leftarrow.png" alt="prev" title="previous" /></span>
 						<div class="als-viewport">
-							<ul class="als-wrapper">
+							<ul class="als-wrapper" id="dlink">
+			
 								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/python.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold ">Python</p>
-										</div>
-									</div>
+									<div class="card skillCard shadow-sm" >
+											<img class="card-img-top skillImg" src="asset/skills/python.png" alt="Card image cap">
+											<div class="card-body">
+											<p class="text-center skillName font-weight-bold ">dython</p>
+											</div>
+											</div>
 								</li>
 								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/html5.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">HTML</p>
-										</div>
-									</div>
+									<div class="card skillCard shadow-sm" >
+											<img class="card-img-top skillImg" src="asset/skills/python.png" alt="Card image cap">
+											<div class="card-body">
+											<p class="text-center skillName font-weight-bold ">cython</p>
+											</div>
+											</div>
 								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/c++.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">C++</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/android.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">Python</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/java.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">HTML</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/sketch.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">C++</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/ml.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">Python</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/photoshop.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">HTML</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/ai.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">C++</p>
-										</div>
-									</div>
-								</li>
+
 							</ul>
 						</div>
 						<span class="als-next"><img src="asset/rightArrow.png" alt="next" title="next" /></span>
@@ -535,55 +480,8 @@
 				<br>
 				<br>
 				<br>
-
-				<div class="row">
-					<div class="col-4 mb-4">
-						<div class="card h-100">
-							<img src="..." class="card-img-top" alt="...">
-							<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">Last updated 3 mins ago</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 mb-4">
-						<div class="card h-100">
-							<img src="..." class="card-img-top" alt="...">
-							<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">Last updated 3 mins ago</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 mb-4">
-						<div class="card h-100">
-							<img src="..." class="card-img-top" alt="...">
-							<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">Last updated 3 mins ago</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 mb-4">
-						<div class="card h-100">
-							<img src="..." class="card-img-top" alt="...">
-							<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">Last updated 3 mins ago</small>
-							</div>
-						</div>
+				<div class="container-fluid">
+					<div class="row" id="myp">
 					</div>
 				</div>
 				
@@ -594,15 +492,14 @@
 
 			<img id="profilePic2" src="asset/profilePic/profile1.png" >
 			<div class="left">
-				<p class="font"> <img class="infoIcon" src="asset/atTheRate.png"> prishivgupta<br><small style>India</small></p>
+				<p class="font"> <img class="infoIcon pname" src="asset/atTheRate.png"><br><small style>India</small></p>
 			</div>
 			<div id="followButtons2" class="container-fluid">
-				<button type="button" class="btn">Followers<br><span>100</span></button>
-				<button type="button" class="btn">Following<br><span>100</span></button>
+				<button type="button" class="btn pfoll"></button>
+				<button type="button" class="btn pings"></button>
 			</div>
 			
 		</div>
-		
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -658,6 +555,12 @@
 				
 			});
 		</script>
+
+		<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>    
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>    
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+        <script src="./javascript/index.js"></script>
 	
 	</body>
   
