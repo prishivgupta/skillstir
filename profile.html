@@ -480,46 +480,7 @@
 										</div>
 									</div>
 								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/java.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">HTML</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/sketch.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">C++</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/ml.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">Python</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/photoshop.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">HTML</p>
-										</div>
-									</div>
-								</li>
-								<li class="als-item">
-									<div class="card skillCard shadow-sm">
-										<img class="card-img-top skillImg" src="asset/skills/ai.png" alt="Card image cap">
-										<div class="card-body">
-											<p class="text-center skillName font-weight-bold">C++</p>
-										</div>
-									</div>
-								</li>
+								
 							</ul>
 						</div>
 						<span class="als-next"><img src="asset/rightArrow.png" alt="next" title="next" /></span>
@@ -538,7 +499,7 @@
 
 				<div class="row">
 					<div class="col-4 mb-4">
-						<div class="card h-100">
+						<div class="card h-100 text-white bg-dark">
 							<img src="asset/loginPage.png" class="card-img-top" alt="...">
 							<div class="card-body">
 							<h5 class="card-title">Card title</h5>
@@ -550,7 +511,7 @@
 						</div>
 					</div>
 					<div class="col-4 mb-4">
-						<div class="card h-100 bg-dark text-white">
+						<div class="card h-100 text-white bg-dark">
 							<img src="asset/loginPage.png" class="card-img-top" alt="...">
 							<div class="card-body">
 							<h5 class="card-title">Card title</h5>
@@ -562,7 +523,7 @@
 						</div>
 					</div>
 					<div class="col-4 mb-4">
-						<div class="card h-100">
+						<div class="card h-100 text-white bg-dark">
 							<img src="asset/loginPage.png" class="card-img-top" alt="...">
 							<div class="card-body">
 							<h5 class="card-title">Card title</h5>
@@ -574,31 +535,7 @@
 						</div>
 					</div>
 					<div class="col-4 mb-4">
-						<div class="card h-100 bg-dark text-white">
-							<img src="asset/loginPage.png" class="card-img-top" alt="...">
-							<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">Last updated 3 mins ago</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 mb-4">
-						<div class="card h-100">
-							<img src="asset/loginPage.png" class="card-img-top" alt="...">
-							<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">Last updated 3 mins ago</small>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 mb-4">
-						<div class="card h-100 bg-dark text-white">
+						<div class="card h-100 text-white bg-dark">
 							<img src="asset/loginPage.png" class="card-img-top" alt="...">
 							<div class="card-body">
 							<h5 class="card-title">Card title</h5>
@@ -667,11 +604,10 @@
 			$(document).ready(function() 
 			{
 				$("#lista1").als({
-					visible_items: 5,
-					scrolling_items: 4,
+					visible_items: 4,
 					orientation: "horizontal",
 					circular: "yes",
-					autoscroll: "yes",
+					autoscroll: "no",
 					interval: 3000,
 					speed: 800,
 					easing: "linear",
@@ -681,6 +617,11 @@
 				
 				
 			});
+
+			$( ".skillCardEdit" ).click(function() {
+				$( this ).toggleClass( "text-white bg-info" );
+			})
+
 		</script>
 	
 	</body>
