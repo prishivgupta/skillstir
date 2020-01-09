@@ -52,43 +52,26 @@
 
 			#rightContainer {
 				width:80%;
-				padding:0px 40px;
+				padding-right:40px;
 				transition: 2s;
 			}
 
-			#notifications {
+			#leftContainer {
 				width:20%;
 				height: 300px;
 				float:left;
 				position: relative;
+				left:8px;
 				opacity: 0;
     			transition: opacity 0.6s;
 				font-family:helvetica;
 				font-weight: bold;
+				text-align: center;
 			}
 
-			#notifications button {
+			#leftContainer button {
 				font-family:helvetica;
 				font-weight: bold;
-			}
-
-			#notifications small {
-				position: relative;
-				left:40px;
-			}
-
-			#notifications div button{
-				position: relative;
-				left:23px;
-			}
-
-			#notifications::-webkit-scrollbar {
-				display: none;
-			}
-
-			.left {
-				position: relative;
-				left:87px;
 			}
 
 			.textColour {
@@ -120,8 +103,7 @@
 				border-radius: 50%;
 				width:125px;
 				height: 125px;
-				position: relative;
-				left:84px;
+				background-color: white;
 			}
 
 			#bio {
@@ -551,7 +533,7 @@
 			</div>
 		</div>
 
-		<div id="notifications" class="container-fluid overflow-auto">
+		<div id="leftContainer" class="container-fluid">
 
 			<img id="profilePic2" src="asset/profilePic/profile1.png" >
 			<div class="left">
@@ -585,17 +567,17 @@
 			window.onscroll = function() {scrollFunction()};
 			function scrollFunction() {
 			if (document.body.scrollTop >= 250 || document.documentElement.scrollTop >= 250) {
-				document.getElementById("notifications").style.position = "fixed";
-				document.getElementById("notifications").style.top = "120px";
-				document.getElementById("notifications").style.opacity = "1";
+				document.getElementById("leftContainer").style.position = "fixed";
+				document.getElementById("leftContainer").style.top = "120px";
+				document.getElementById("leftContainer").style.opacity = "1";
 				document.getElementById("rightContainer").style.width = "80%";
 				document.getElementById("rightContainer").style.float = "right";
 				
 			} else {
-				document.getElementById("notifications").style.position = "relative";
-				document.getElementById("notifications").style.top = "auto";
-				document.getElementById("notifications").style.left = "auto";
-				document.getElementById("notifications").style.opacity = "0";
+				document.getElementById("leftContainer").style.position = "relative";
+				document.getElementById("leftContainer").style.top = "auto";
+				document.getElementById("leftContainer").style.left = "8px";
+				document.getElementById("leftContainer").style.opacity = "0";
 				document.getElementById("rightContainer").style.width = "80%";
 				document.getElementById("rightContainer").style.float = "none";
 			}
