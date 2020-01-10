@@ -1,0 +1,196 @@
+   body {
+    background-color: #fafafa;
+    }
+
+    /* ---------------------------------------------------
+        CONTENT STYLE
+    ----------------------------------------------------- */
+
+    .navbar {
+        height: 68px;
+    }
+
+    #profileBar {
+        background-color: #fafafa;
+        transition: 0.4s;
+        margin-top:70px;
+        margin-bottom:20px;
+        width: 100%;
+        border:1px solid rgb(235, 235, 235);
+        padding:40px 60px;
+    }
+
+    #profileBar button {
+        border-radius: 5px;
+    }
+
+    #profileBar button span{
+        margin-right: 5px;
+    }
+
+    #rightContainer h2 {
+        float: left;
+    }
+
+    #rightContainer {
+        width:80%;
+        padding-right:40px;
+        transition: 2s;
+    }
+
+    #leftContainer {
+        width:20%;
+        height: 300px;
+        float:left;
+        position: relative;
+        left:8px;
+        opacity: 0;
+        transition: opacity 0.6s;
+        font-family:helvetica;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #leftContainer button {
+        font-family:helvetica;
+        font-weight: bold;
+    }
+
+    .textColour {
+        color: #37353b;
+    }
+    .font {
+        font-family: 'Bree Serif', serif;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #profilePic {
+        background-color: #9bb5cf;
+        border-radius:10px;
+        width:160px;
+        height: 160px;
+        margin-right: 40px;
+    }
+
+    #followButtons {
+        position: relative;
+        left:-12px;
+    }
+
+    #profilePic2 {
+        border-radius: 50%;
+        width:125px;
+        height: 125px;
+        background-color: white;
+    }
+
+    #bio {
+        background-color: #ffffff;
+        padding: 20px 40px;
+        margin-bottom:10px;
+        border:1px solid rgb(235, 235, 235);
+    }
+
+    #skills {
+        background-color: #ffffff;
+        padding: 20px 40px 0px 40px;
+        margin-bottom:10px;
+        border:1px solid rgb(235, 235, 235);
+    }
+
+    #projects {
+        background-color: #ffffff;
+        padding: 20px 40px;
+        margin-bottom:10px;
+        border:1px solid rgb(235, 235, 235);
+    }
+
+    #dropdownMenu {
+        border-radius: 50%;
+        width:45px;
+        height:45px;
+        background: lightblue;
+    }
+    
+    #notificationIcon {
+        width:30px;
+    }
+
+    .infoIcon {
+        width:20px;
+        height:20px;
+    }
+
+    .edit {
+        float: right;
+        height: 25px;
+        width: 25px;
+    }
+
+    .skillCard {
+        height: 140px;
+        width:110px;
+        border-radius:20px;
+        border:none;
+        background-color: #fafafa;
+        border:1px solid #e9e8e8;
+    }
+
+    .skillName {
+        position: relative;
+        top:30px;
+    }
+
+    .skillImg {
+        height:50px;
+        width:50px;
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        margin: auto;
+        
+    }
+    
+    .skillCardEdit {
+        height: 160px;
+        width:125px;
+        border-radius:20px;
+        border:none;
+        background-color: #fafafa;
+        border:1px solid #e9e8e8;
+    }
+
+    .skillNameEdit {
+        position: relative;
+        top:30px;
+    }
+
+    .skillImgEdit {
+        height:50px;
+        width:50px;
+        position: relative;
+        top:20px;
+        bottom: 0;
+        margin: auto;
+        
+    }
+    
+    .icon{
+        margin-top:20px;
+        height:40px;
+        width:40px;
+    }
+    .icons
+    {
+        height:20px;
+        width:20px;
+        margin-top:3px;
+        margin-left:5px;
+        margin-right:10px;
+        float:left;
+    }
+    
