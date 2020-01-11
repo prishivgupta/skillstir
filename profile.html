@@ -16,9 +16,255 @@
 		<!--Horizntal Scroll CSS-->
 		<link rel="stylesheet" type="text/css" media="screen" href="css/horizontalScroll/als_demo.css" />
 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
 		<title>Profile</title>
 		
-		<link rel="stylesheet" type="text/css" href="css/profile.css">
+		<style type="text/css">
+		
+			body {
+			background-color: #fafafa;
+			}
+
+			/* ---------------------------------------------------
+				CONTENT STYLE
+			----------------------------------------------------- */
+
+			.navbar {
+				height: 68px;
+			}
+
+			#profileBar {
+				background-color: #fafafa;
+				transition: 0.4s;
+				margin-top:70px;
+				margin-bottom:20px;
+				width: 100%;
+				border:1px solid rgb(235, 235, 235);
+				padding:40px 60px;
+			}
+
+			#profileBar button {
+				border-radius: 5px;
+			}
+
+			#profileBar button span{
+				margin-right: 5px;
+			}
+
+			#rightContainer h2 {
+				float: left;
+			}
+
+			#rightContainer {
+				width:80%;
+				padding-right:40px;
+				transition: 2s;
+			}
+
+			#leftContainer {
+				width:20%;
+				height: 300px;
+				float:left;
+				position: relative;
+				left:8px;
+				opacity: 0;
+    			transition: opacity 0.6s;
+				font-family:helvetica;
+				font-weight: bold;
+				text-align: center;
+			}
+
+			#leftContainer button {
+				font-family:helvetica;
+				font-weight: bold;
+			}
+
+			.textColour {
+				color: #37353b;
+			}
+			.font {
+				font-family: 'Bree Serif', serif;
+			}
+
+			.flex-container {
+				display: flex;
+				flex-direction: column;
+			}
+
+			#profilePic {
+				background-color: #9bb5cf;
+				border-radius:10px;
+				width:160px;
+				height: 160px;
+				margin-right: 40px;
+			}
+
+			#followButtons {
+				position: relative;
+				left:-12px;
+			}
+
+			#profilePic2 {
+				border-radius: 50%;
+				width:125px;
+				height: 125px;
+				background-color: white;
+			}
+
+			#bio {
+				background-color: #ffffff;
+				padding: 20px 40px;
+				margin-bottom:10px;
+				border:1px solid rgb(235, 235, 235);
+			}
+
+			#skills {
+				background-color: #ffffff;
+				padding: 20px 40px 0px 40px;
+				margin-bottom:10px;
+				border:1px solid rgb(235, 235, 235);
+			}
+
+			#projects {
+				background-color: #ffffff;
+				padding: 20px 40px;
+				margin-bottom:10px;
+				border:1px solid rgb(235, 235, 235);
+			}
+
+			#dropdownMenu {
+				border-radius: 50%;
+				width:45px;
+				height:45px;
+				background: lightblue;
+			}
+			
+			#notificationIcon {
+				width:30px;
+			}
+
+			.infoIcon {
+				width:20px;
+				height:20px;
+			}
+
+			.edit {
+				float: right;
+				height: 25px;
+				width: 25px;
+			}
+
+			.skillCard {
+				height: 140px;
+				width:110px;
+				border-radius:20px;
+				border:none;
+				background-color: #fafafa;
+				border:1px solid #e9e8e8;
+			}
+
+			.skillName {
+				position: relative;
+				top:30px;
+			}
+
+			.skillImg {
+				height:50px;
+				width:50px;
+				position: absolute;
+    			top: 20px;
+    			bottom: 0;
+    			margin: auto;
+				
+			}
+			
+			.skillCardEdit {
+				height: 160px;
+				width:125px;
+				border-radius:20px;
+				border:none;
+				background-color: #fafafa;
+				border:1px solid #e9e8e8;
+			}
+
+			.skillNameEdit {
+				position: relative;
+				top:30px;
+			}
+
+			.skillImgEdit {
+				height:50px;
+				width:50px;
+				position: relative;
+    			top:20px;
+    			bottom: 0;
+    			margin: auto;
+				
+			}
+
+
+			.dropdown-content {
+				right: 0;
+			}
+
+
+			.icon{
+				margin-top:20px;
+				height:40px;
+				width:40px;
+			}
+			.icons
+			{
+				height:20px;
+				width:20px;
+				margin-top:3px;
+				margin-left:5px;
+				margin-right:10px;
+				float:left;
+			}
+			form * {
+    border-radius:0 !important;
+			}
+
+			form > fieldset > legend {
+							font-size:120%;
+			}
+
+			.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+				}
+				.divider-text span {
+								padding: 7px;
+								font-size: 12px;
+								position: relative;   
+								z-index: 2;
+				}
+				.divider-text:after {
+								content: "";
+								position: absolute;
+								width: 100%;
+								border-bottom: 1px solid #ddd;
+								top: 55%;
+								left: 0;
+								z-index: 1;
+				}
+
+				.btn-facebook {
+								background-color: #405D9D;
+								color: #fff;
+				}
+				.btn-twitter {
+								background-color: #42AEEC;
+								color: #fff;
+				}
+			
+			
+
+		</style>
 	
 	</head>
   
@@ -101,7 +347,111 @@
 							</button>
 							</div>
 							<div class="modal-body">
+								<div class="container">
+									<div class="card bg-light">
+										<article class="card-body mx-auto" style="max-width: 400px;">
+											<form>
+											<h4>About</h4>
+											<div class="form-group">
+												<textarea class="form-control rounded-0"  id="exampleFormControlTextarea2" rows="3"></textarea>
+											</div>
+											<h4>Personal Details</h4>
+											<br>
+											<div class="form-group input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+												</div>
+												<input name="" class="form-control" placeholder="First name" type="text">
+											</div> 
+											<div class="form-group input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+												</div>
+												<input name="" class="form-control" placeholder="Last name" type="text">
+											</div>
+											<div class="form-group input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text"> <i class="fa fa-users"></i> </span>
+												</div>
+												<input name="" class="form-control" placeholder="Username" type="text">
+											</div>
+												<div class="form-group input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"> <i class="far fa-envelope"></i> </span>
+													</div>
+													<input name="" class="form-control" placeholder="Email" type="text">
+												</div> 
+												<div class="form-group input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"> <i class="fab fa-github"></i> </span>
+													</div>
+													<input name="" class="form-control" placeholder="Github Username" type="email">
+												</div> 
+												<div class="form-group input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"><i class="fa fa-calendar"></i></span>
+													</div>
+														<input name="" class="form-control" placeholder="Date of Birth" type="text">
+												</div> 
+												<div class="form-group input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"> <i class="fa fa-globe"></i> </span>
+													</div>
+													<input class="form-control" placeholder="Country" type="text">
+												</div>
+												
+												<div class="custom-control custom-radio custom-control-inline">
+													<input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+													<label class="custom-control-label" for="defaultInline1">Male</label>
+												</div>
+												
+												<!-- Default inline 2-->
+												<div class="custom-control custom-radio custom-control-inline">
+													<input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+													<label class="custom-control-label" for="defaultInline2">Female</label>
+												</div>
+												<br>
+												<br>
+												<h4>Educational Details</h4>
+												<br>
+												<div class="form-group input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"> <i class="fa fa-graduation-cap"></i> </span>
+													</div>
+													<input class="form-control" placeholder="College" type="text">
+												</div>
+												<div class="form-group input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"><i class="fa fa-graduation-cap"></i></span>
+													</div>
+													<input class="form-control" placeholder="Start Year" type="text">
+													<input class="form-control" placeholder="End Year" type="text">
+												</div>
+												<div class="form-group input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"> <i class="fa fa-graduation-cap"></i> </span>
+													</div>
+													<input class="form-control" placeholder="High School" type="text">
+												</div>
+												<div class="form-group input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"><i class="fa fa-graduation-cap"></i></span>
+													</div>
+													<input class="form-control" placeholder="Start Year" type="text">
+													<input class="form-control" placeholder="End Year" type="text">
+												</div>
+											</form>
+										</article>
+									</div> 
 								
+								</div>
+								
+
+								<div class="container">
+											<div class="row">
+												
+											</div>
+								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-primary">Save Changes</button>
@@ -430,7 +780,49 @@
 		<!--Horizontal Scroll JS-->
 		<script type="text/javascript" src="javascript/horizontalScroll.js"></script>
 		
-		<script type="text/javascript" src="javascript/profile.js"></script>
+		<script type="text/javascript">
+		
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction() {
+			if (document.body.scrollTop >= 250 || document.documentElement.scrollTop >= 250) {
+				document.getElementById("leftContainer").style.position = "fixed";
+				document.getElementById("leftContainer").style.top = "120px";
+				document.getElementById("leftContainer").style.opacity = "1";
+				document.getElementById("rightContainer").style.width = "80%";
+				document.getElementById("rightContainer").style.float = "right";
+				
+			} else {
+				document.getElementById("leftContainer").style.position = "relative";
+				document.getElementById("leftContainer").style.top = "auto";
+				document.getElementById("leftContainer").style.left = "8px";
+				document.getElementById("leftContainer").style.opacity = "0";
+				document.getElementById("rightContainer").style.width = "80%";
+				document.getElementById("rightContainer").style.float = "none";
+			}
+			}
+
+			$(document).ready(function() 
+			{
+				$("#lista1").als({
+					visible_items: 4,
+					orientation: "horizontal",
+					circular: "yes",
+					autoscroll: "no",
+					interval: 3000,
+					speed: 800,
+					easing: "linear",
+					direction: "left",
+					start_from: 0
+				});
+				
+				
+			});
+
+			$( ".skillCardEdit" ).click(function() {
+				$( this ).toggleClass( "text-white bg-info" );
+			})
+
+		</script>
 	
 	</body>
   
