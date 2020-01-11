@@ -37,3 +37,7 @@
     $( ".skillCardEdit" ).click(function() {
         $( this ).toggleClass( "text-white bg-info" );
     })
+    $('.datepicker').datepicker();
+    
+    $(document).off('.datepicker.data-api');
+
