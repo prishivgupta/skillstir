@@ -31,39 +31,38 @@
             background: lightblue;
         }
 
-        #wrapper {
+        .wrapper {
             background-color: #fff;
-            width: 500px;
-            margin: 110px;
             border: 1px solid #d0d1d5;
-            border-top: 0;
-            border-radius: 15px;
-            padding: 12px;
+            width:85%;
+            margin-top: 40px;
+            margin-left: 38px;
         }
 
         #posts {
             width:50%;
-            height: 300px;
             float:left;
             position: relative;
             top:80px;
-            left:165px;
+            left:165px; 
+            margin-bottom:8%;
         }
 
         #notifications {
             width:25%;
             background-color: white;
             position: fixed;
-            top:170px;
+            top:165px;
             right:165px;
-            height: 300px;
+            height: 55%;
             overflow:auto;
             padding: 20px;
+            border:1px solid #d0d1d5;
         }
 
         #searchBar {
             border-radius:  20px 0 0 20px ;
-            width:570px;
+            width:90%;
             height:45px;
             background-color: #FAFAFA;
             border:1px solid rgb(216, 204, 204);
@@ -79,68 +78,42 @@
         }
 
         .profile-pic {
-            width: 40px;
+            width: 45px;
             height: auto;
             float: left;
-            margin-right: 8px;
         }
 
         .name {
-            margin: 0;
-        }
-
-        .name {
-            color: black;
             font-size: 15px;
-            margin-bottom: 5px;
+            position: relative;
+            top:7px;
         }
+
         .status {
             margin: 11px 0;
         }
 
         .img-content {
             width: 100%;
-            margin-bottom: 11px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .action a {
-            color: #7f7f7f;
+        .action img {
+            width:30px;
+            float:left;
         }
 
-        .action div {
-            display: inline-block;
-        }
-
-        .action div p:hover {
-            text-decoration: underline;
-        }
-
-        .action div:nth-child(n + 2) {
-            margin-left: 20px;
-        }
-
-        .like img,
-        .comment img,
-        .share img {
-            display: inline-block;
-            width: 18px;
-            vertical-align: text-bottom;
-        }
-
-        .like p,
-        .comment p,
-        .share p {
-            display: inline-block;
-        }
-
-        .share img {
-            opacity: 1;
-        }
-
-        .btn:focus {
+        .btn:focus ,#searchBar:focus,button:focus {
             outline: 0;
             box-shadow: none!important;
+        }
+
+        #searchBar:focus {
+            background-color: white;
+        }
+
+        h1 a,h1 a:link,h1 a:visited,h1 a:focus {
+            color:black;
+            text-decoration: none;
         }
 
     </style>
@@ -186,42 +159,127 @@
         
         <div id="posts" class="container-fluid">
 
-            <input id="searchBar" class="form-control float-left" type="search" placeholder="Search" aria-label="Search">
-            <button  id="searchButton" class="btn" type="submit">
-                <img src="asset/search.png">
-            </button>
+            <form class="form-inline">
 
-            <div id="wrapper">
-                <header class="cf">
-                <a href="#"><img class="profile-pic" src="Dashboard/images/Profile/3.jpg"/></a>
-            
-                <h1 class="name">
-                    <a href="#">Pranjal Deshpande</a>
-                </h1>
+                <input id="searchBar" class="form-control float-left" type="search" placeholder="Search" aria-label="Search">
+                <button  id="searchButton" class="btn float-right position-relative" type="submit">
+                    <img src="asset/search.png">
+                </button>
+
+            </form>
+
+            <div class="wrapper">
+
+                <header class="mt-2 ml-3">
+                    <a href="#"><img class="profile-pic mr-2" src="asset/profilePic/profile_pic.png"/></a>
+                    
+                    <h1 class="name">
+                        <a href="#">Pranjal Deshpande</a>
+                        <button class="float-right mr-3 border-0 bg-white">
+                            <img  src="asset/more.png"> 
+                        </button>
+                    </h1>
+                    
+                    <small class="text-muted">5 mins ago</small>
+                    
                 </header>
-            
-                <p class="status">
-                New Web developement Project
+
+                <p class="status ml-3">
+                    New Web developement Project ...........
                 </p>
-                <img class="img-content" src="Dashboard/images/project/img1.jpg" />
-            
-                <div class="action">
-                <div class="like">
-                    <a href="#">
-                    <img src="Dashboard/images/svg/like.svg" alt="thumbs up" />
-                    <p>Like</p>
-                    </a>
+                
+                <img class="img-content mt-2" src="asset/img1.jpg" />
+
+                <div class="m-2 action">
+                    <button type="button" class="btn">
+                        <img class="like" src="asset/like.svg" alt="like" />
+                        <p class="float-left ml-1">69</p>
+                    </button>
+                    <button type="button" class="btn">
+                        <img src="asset/comment.svg" alt="comment" />
+                        <p class="float-left ml-1">2</p>
+                    </button>
+                    <button type="button" class="btn mb-2">
+                        <img src="asset/share.svg" alt="share" />
+                    </button>
                 </div>
-            
-                <div class="share">
-                    <a href="#">
-                    <img src="Dashboard/images/svg/network.svg" alt="" />
-                    <p>
-                        Request to Join
-                    </p>
-                    </a>
+                
+            </div>
+
+            <div class="wrapper">
+
+                <header class="mt-2 ml-3">
+                    <a href="#"><img class="profile-pic mr-2" src="asset/profilePic/profile3.png"/></a>
+                    
+                    <h1 class="name">
+                        <a href="#">Pranjal Deshpande</a>
+                        <button class="float-right mr-3 border-0 bg-white">
+                            <img  src="asset/more.png"> 
+                        </button>
+                    </h1>
+                    
+                    <small class="text-muted">5 mins ago</small>
+                    
+                </header>
+
+                <p class="status ml-3">
+                    New Web developement Project ...........
+                </p>
+                
+                <img class="img-content mt-2" src="asset/img2.jpg" />
+
+                <div class="m-2 action">
+                    <button type="button" class="btn">
+                        <img class="like" src="asset/like.svg" alt="like" />
+                        <p class="float-left ml-1">69</p>
+                    </button>
+                    <button type="button" class="btn">
+                        <img src="asset/comment.svg" alt="comment" />
+                        <p class="float-left ml-1">2</p>
+                    </button>
+                    <button type="button" class="btn mb-2">
+                        <img src="asset/share.svg" alt="share" />
+                    </button>
                 </div>
+                
+            </div>
+
+            <div class="wrapper">
+
+                <header class="mt-2 ml-3">
+                    <a href="#"><img class="profile-pic mr-2" src="asset/profilePic/profile1.png"/></a>
+                    
+                    <h1 class="name">
+                        <a href="#">Pranjal Deshpande</a>
+                        <button class="float-right mr-3 border-0 bg-white">
+                            <img  src="asset/more.png"> 
+                        </button>
+                    </h1>
+                    
+                    <small class="text-muted">5 mins ago</small>
+                    
+                </header>
+
+                <p class="status ml-3">
+                    New Web developement Project ...........
+                </p>
+                
+                <img class="img-content mt-2" src="asset/img3.jpg" />
+
+                <div class="m-2 action">
+                    <button type="button" class="btn">
+                        <img class="like" src="asset/like.svg" alt="like" />
+                        <p class="float-left ml-1">69</p>
+                    </button>
+                    <button type="button" class="btn">
+                        <img src="asset/comment.svg" alt="comment" />
+                        <p class="float-left ml-1">2</p>
+                    </button>
+                    <button type="button" class="btn mb-2">
+                        <img src="asset/share.svg" alt="share" />
+                    </button>
                 </div>
+                
             </div>
 
         </div>
@@ -229,9 +287,31 @@
         <div id="notifications" class="container-fluid">
 
             <h4 class="float-left">Notifications</h4>
-            <a href="#" class="float-right mr-2 mt-1">Clear all</a>
+            <a id="clear" href="" class="float-right mr-2 mt-1">Clear all</a>
             <br>
             <br>
+            <div class="toast" data-autohide="false">
+                <div class="toast-header">
+                  <strong class="mr-auto text-primary">Toast Header</strong>
+                  <small class="text-muted">5 mins ago</small>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                  Some text inside the toast body
+                </div>
+            </div>
+
+            <div class="toast" data-autohide="false">
+                <div class="toast-header">
+                  <strong class="mr-auto text-primary">Toast Header</strong>
+                  <small class="text-muted">5 mins ago</small>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                  Some text inside the toast body
+                </div>
+            </div>
+
             <div class="toast" data-autohide="false">
                 <div class="toast-header">
                   <strong class="mr-auto text-primary">Toast Header</strong>
@@ -286,9 +366,13 @@
     
         <script>
         
-        $(document).ready(function(){
-            $('.toast').toast('show');
-        });
+            $(document).ready(function(){
+                $('.toast').toast('show');
+            });
+
+            $('.like').click(function(){
+                $(this).attr('src', 'asset/liked.svg');      
+            });
         
         </script>
 
