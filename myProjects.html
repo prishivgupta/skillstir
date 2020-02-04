@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <title>My Projects</title>
+
+        <style type="text/css" rel="stylesheet">
+        
+            .navbar {
+                height: 68px;
+            }
+
+            #notificationIcon {
+                width:30px;
+            }
+
+            #dropdownMenu {
+                border-radius: 50%;
+                width:45px;
+                height:45px;
+                background: lightblue;
+            }
+
+            #content {
+                position: relative;
+                top:85px;
+                width:80%;
+                height: 200%;
+                padding:10px;
+            }
+
+            #projectPic {
+                border-radius: 10px;
+                height:300px;
+                overflow: hidden;
+            }
+
+            #tasks {
+                width:30%;
+                background-color: white;
+                position:sticky;
+                top:130px;
+                float:left;
+                height: 450px;
+                overflow:auto;
+                padding: 20px;
+                border:1px solid rgb(235, 235, 235);
+            }
+
+            #skills {
+                background-color: #ffffff;
+                padding: 20px 40px 0px 40px;
+                margin-bottom:10px;
+                border:1px solid rgb(235, 235, 235);
+                width:65%;
+                float: right;
+            }
+
+            #teamMembers {
+                background-color: #ffffff;
+                padding: 20px 40px 0px 40px;
+                margin-bottom:10px;
+                border:1px solid rgb(235, 235, 235);
+                width:65%;
+                height:300px;
+                float: right;
+            }
+
+            .clearfix:after { 
+                content: "."; 
+                visibility: hidden; 
+                display: block; 
+                height: 0; 
+                clear: both;
+            }
+
+            
+        
+        </style>
+
+    </head>
+
+    <body>
+        
+        <!-- Navigation Bar  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">Hustle</a>			
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Compete</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-light mr-5">
+                    <img id="notificationIcon" src="asset/notifications.png">
+                </button>
+                <div class="dropdown">
+                    <button class="btn" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <h4 class="font-weight-bold">P</h4>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                        <button class="dropdown-item" type="button">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="content" class="container-fluid clearfix">
+
+            <div id="projectPic" class="card">
+                <img src="asset/img1.jpg" class="card-img" alt="Project Image"> 
+            </div>
+
+            <br>
+
+            <div class="ml-3">
+                <h4 class="display-4">Project title</h4>
+                <br>
+                <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+            </div>
+
+            <br>
+            <br>
+
+            <div id="tasks" class="container-fluid ml-3">
+
+                <h3>Tasks</h3>
+
+            </div>
+
+            <div id="teamMembers"class="container-fluid mr-3">
+		
+				<div>
+					<h2 class="font">Team Members</h3>
+					
+				</div>
+				<br>
+				
+		
+			</div>
+
+            <div id="skills"class="container-fluid mr-3">
+		
+				<div>
+					<h2 class="font">Skills</h3>
+				</div>
+                
+                
+		
+			</div>
+
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+    </body>
+
+</html>

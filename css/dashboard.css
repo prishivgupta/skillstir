@@ -1,0 +1,115 @@
+body {
+    background-color: #FAFAFA;
+}
+
+.navbar {
+height: 68px;
+}
+
+#notificationIcon {
+    width:30px;
+}
+
+#dropdownMenu {
+    border-radius: 50%;
+    width:45px;
+    height:45px;
+    background: lightblue;
+}
+
+.wrapper {
+    background-color: #fff;
+    border: 1px solid #d0d1d5;
+    width:85%;
+    margin-top: 40px;
+    margin-left: 38px;
+}
+
+#posts {
+    width:50%;
+    float:left;
+    position: relative;
+    top:80px;
+    left:165px; 
+    margin-bottom:8%;
+}
+
+#notifications {
+    width:25%;
+    background-color: white;
+    position: fixed;
+    top:165px;
+    right:165px;
+    height: 55%;
+    overflow:auto;
+    padding: 20px;
+    border:1px solid #d0d1d5;
+}
+
+#searchBar {
+    border-radius:  20px 0 0 20px ;
+    width:90%;
+    height:45px;
+    background-color: #FAFAFA;
+    border:1px solid rgb(216, 204, 204);
+    border-right: 0px;
+}
+
+#searchButton {
+    border-radius: 0 20px 20px 0;
+    height:45px;
+    background-color: #FAFAFA;
+    border:1px solid rgb(216, 204, 204);
+    border-left: 0px;
+}
+
+.profile-pic {
+    width: 45px;
+    height: auto;
+    float: left;
+}
+
+.name {
+    font-size: 15px;
+    position: relative;
+    top:7px;
+}
+
+.status {
+    margin: 11px 0;
+}
+
+.img-content {
+    width: 100%;
+}
+
+.action img {
+    width:30px;
+    float:left;
+}
+
+.btn:focus ,#searchBar:focus,button:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+#searchBar:focus {
+    background-color: white;
+}
+
+h1 a,h1 a:link,h1 a:visited,h1 a:focus {
+    color:black;
+    text-decoration: none;
+}
+
+.skills {
+    background-color: #fafafa;
+}
+
+.skills img {
+    width:45px;
+    margin:10px 2.5%;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2000;
+}
