@@ -9,7 +9,9 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-        <title>My Projects</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <title>Project</title>
 
         <style type="text/css" rel="stylesheet">
         
@@ -31,13 +33,97 @@
             #content {
                 position: relative;
                 top:85px;
-                width:80%;
+                width:85%;
+                height: 200%;
                 padding:10px;
-                background-color: blanchedalmond;
             }
 
             #projectPic {
-                border-radius: 10px;
+                position:relative;
+                top:80px;
+                height:360px;
+                overflow: hidden;
+                border:none;
+            }
+
+            #tasks {
+                width:27%;
+                background-color: white;
+                position:sticky;
+                top:130px;
+                float:left;
+                height: 450px;
+                overflow:auto;
+                padding: 20px;
+                border:1px solid rgb(235, 235, 235);
+            }
+
+            #skillContainer {
+                background-color: #ffffff;
+                padding: 20px 40px 0px 40px;
+                margin-bottom:10px;
+                border:1px solid rgb(235, 235, 235);
+                width:69%;
+                float: right;
+            }
+
+            #teamMemberContainer {
+                background-color: #ffffff;
+                padding: 20px 40px 0px 40px;
+                margin-bottom:10px;
+                border:1px solid rgb(235, 235, 235);
+                width:69%;
+                float: right;
+            }
+
+            .clearfix:after { 
+                content: "."; 
+                visibility: hidden; 
+                display: block; 
+                height: 0; 
+                clear: both;
+            }
+
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .skillCard {
+                padding: 25px 10px;
+                height:75%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .skillCard div {
+                display: flex;
+                justify-content: center;
+                width: 120px;
+            }
+
+            .skillCard img {
+                width:45%;
+            }
+
+            .skillName {
+                
+            }
+
+            .view {
+                height:195px;
+                overflow: hidden;
+            }
+
+            .btn:focus {
+                outline: 0;
+                box-shadow: none!important;
+            }
+
+            .description {
+                width:70%;
             }
         
         </style>
@@ -81,13 +167,326 @@
             </div>
         </nav>
 
-        <div id="content" class="container-fluid">
+        <div id="projectPic" class="card">
+            <img src="asset/img1.jpg" class="card-img" alt="Project Image"> 
+        </div>
 
-            <div id="projectPic" class="jumbotron jumbotron-fluid">
+        <div id="content" class="container-fluid clearfix">
+            
+            <div class="ml-3">
+                <h1>Project title</h2>
+                <br>
+                <p class="description">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+            </div>
 
-			
+            <br>
+
+            <div id="tasks" class="container-fluid ml-3">
+
+                <h3>Tasks</h3>
 
             </div>
+
+            <div id="teamMemberContainer"class="container-fluid mr-3">
+		
+				<div>
+					<h2 class="font">Team Members</h3>
+					
+                </div>
+                
+				<br>
+				
+                <div id="teamMembers" class="container-fluid flex-container view">
+                    
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/python.png" alt="Card image cap">
+                            </div>
+                            
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Python</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/html5.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold">HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/c++.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold">C++</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/ai.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Adobe Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/android.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold">Android</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/edm.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold">EDM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/ios.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">IOS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/java.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Java</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/lightroom.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Lightroom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/ml.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Machine Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/photoshop.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/sketch.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Sketch</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/unity.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Unity</p>
+                            </div>
+                        </div>
+                    </div>
+                    	
+                </div>
+
+                <button type="button" onclick="myFunction()" id="viewMoreMembers" class="btn float-right mr-4 mb-3">View More</button>
+
+			</div>
+
+            <div id="skillContainer" class="container-fluid mr-3">
+		
+				<div>
+					<h2>Skills</h3>
+                </div>
+                
+                <br>
+                
+                <div id="skills" class="container-fluid flex-container view">
+                    
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/python.png" alt="Card image cap">
+                            </div>
+                            
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Python</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/html5.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold">HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/c++.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold">C++</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/ai.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Adobe Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/android.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold">Android</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/edm.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold">EDM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/ios.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">IOS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/java.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Java</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/lightroom.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Lightroom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/ml.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Machine Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/photoshop.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Photoshop</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/sketch.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Sketch</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card skillCard mb-3">
+                            <div>
+                                <img class="card-img-top" src="asset/skills/unity.png" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <p class="text-center skillName font-weight-bold ">Unity</p>
+                            </div>
+                        </div>
+                    </div>
+                    	
+                </div>
+
+                <button type="button" onclick="myFunction()" id="viewMoreSkills" class="btn float-right mr-4 mb-3">View More</button>
+		
+			</div>
 
         </div>
 
@@ -96,6 +495,37 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script>
+
+            function myFunction() {
+
+            document.getElementById("skills").classList.toggle("view");
+
+                var x = document.getElementById("viewMoreSkills");
+                if (x.innerHTML == "View More") {
+                    x.innerHTML = "View less";
+                } else {
+                    x.innerHTML = "View More";
+                }
+
+            }
+
+            function myFunction() {
+
+                document.getElementById("teamMembers").classList.toggle("view");
+
+                var x = document.getElementById("viewMoreMembers");
+                if (x.innerHTML == "View More") {
+                    x.innerHTML = "View less";
+                } else {
+                    x.innerHTML = "View More";
+                }
+
+            }
+
+        </script>
+        
     </body>
 
 </html>
