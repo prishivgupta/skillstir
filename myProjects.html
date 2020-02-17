@@ -1,53 +1,320 @@
 <!DOCTYPE html>
-  <html>
+<html>
+
     <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-      <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <title> My Projects</title>
 
         <style>
+
             body {
             background-image: url('320.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
             }
+
+            h3 {
+                padding-left:20px;
+            }
+
+            button {
+                margin-right:10px;
+            }
+
+            .clearfix:after { 
+                content: "."; 
+                visibility: hidden; 
+                display: block; 
+                height: 0; 
+                clear: both;
+            }
+
+            .createProject {
+                border: none;
+                background: #404040;
+                color: #ffffff !important;
+                font-weight: 400;
+                letter-spacing: 2px;
+                padding: 20px;
+                margin-right: 20px;
+                text-transform: uppercase;
+                border-radius: 6px;
+                display: inline-block;
+                transition: all 0.3s ease 0s;
+            }
+            
+            .createProject:hover {
+                color: #404040 !important;
+                font-weight: 700 !important;
+                letter-spacing: 3px;
+                background: none;
+                -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                transition: all 0.3s ease 0s;
+            }
+
+            .view {
+                height:300px;
+                overflow: hidden;
+            }
+
         </style>
 
     </head>
 
     <body>
 
-        <div class="col s12 m8 offset-m2 l6 offset-l3">
-            <div class="card-panel grey lighten-5 z-depth-1">
-              <div class="row valign-wrapper">
-                <div class="col s2">
-                  <img src="images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                  <ul id="nav-mobile" class="hide-on-med-and-down">
+                    <li><a href="#" class="">Hustle</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">My Projects</a></li>
+                    <li><a href="">Messages</a></li>
+                    <li><a href="">Compete</a></li>
+                  </ul>
                 </div>
-                <div class="col s10">
-                  <span class="black-text">
-                    This is a square image. Add the "circle" class to it to make it appear circular.
-                  </span>
-                </div>
-              </div>
-            </div>
+            </nav>
         </div>
 
-        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <br>
 
-        
+        <div class="container">
+
+            <div align="right"><a class="createProject" href=""><i class="material-icons right">add_circle_outline</i>Create new project</a></div>
+
+        </div>
+
+        <div class="container clearfix">
+
+            <h3>Pending</h3>
+
+            <div id="pending" class="row view">
+
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+          
+            </div>
+
+            <button type="button" onclick="viewPending()" id="viewPending" class="btn-flat right">View More</button>
+                    
+        </div>
+
+        <div class="container clearfix">
+
+            <h3>Completed</h3>
+
+            <div id="completed" class="row view">
+
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="" src="asset/loginPage.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">expand_less</i></span>
+                        
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+          
+            </div>
+
+            <button type="button" onclick="viewComplete()" id="viewComplete" class="btn-flat right">View More</button>
+                    
+        </div>
 
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <script>
+
+            var pending = $("#pending").find(".s4").length;
+            var completed = $("#completed").find(".s4").length;
+            
+            if(pending > 3) {
+                
+            } else {
+                document.getElementById("viewPending").style.display = "none";
+            }
+
+            if(completed > 3) {
+                
+            } else {
+                document.getElementById("viewComplete").style.display = "none";
+            }
+
+            function viewPending() {
+
+                document.getElementById("viewPending").style.backgroundColor = "white";
+
+                document.getElementById("pending").classList.toggle("view");
+
+                var x = document.getElementById("viewPending");
+                if (x.innerHTML == "View More") {
+                    x.innerHTML = "View less";
+                } else {
+                    x.innerHTML = "View More";
+                }
+
+            }
+
+            function viewComplete() {
+
+                document.getElementById("viewComplete").style.backgroundColor = "white";
+
+                document.getElementById("completed").classList.toggle("view");
+
+                var x = document.getElementById("viewComplete");
+                if (x.innerHTML == "View More") {
+                    x.innerHTML = "View less";
+                } else {
+                    x.innerHTML = "View More";
+                }
+
+            }
+
+        </script>
+
     </body>
-  </html>
+
+</html>
