@@ -76,6 +76,10 @@
                 float: right;
             }
 
+            #viewMoreMembers, #viewMoreSkills {
+                display: none;
+            }
+
             .clearfix:after { 
                 content: "."; 
                 visibility: hidden; 
@@ -128,7 +132,7 @@
             }
 
             .view {
-                height:195px;
+                height:202px;
                 overflow: hidden;
             }
 
@@ -214,7 +218,7 @@
         <div id="content" class="container-fluid clearfix">
 
             <div>
-                <a class="example_e float-right mr-5" href="" >Create new project</a>
+                <a class="example_e float-right mr-5" href="" >Edit</a>
             </div>
 
             <br>
@@ -257,7 +261,7 @@
                 
 				<br>
 				
-                <div id="teamMembers" class="container-fluid flex-container view">
+                <div id="teamMembers" class="container-fluid flex-container">
                     
                     <div class="mr-3">
                         <div class="card membersCard">
@@ -446,7 +450,7 @@
                             
                         </div>
                     </div>
-
+                    
                 </div>
 
                 <button type="button" onclick="viewMembers()" id="viewMoreMembers" class="btn float-right pr-4 mr-5 mb-3">View More</button>
@@ -461,7 +465,7 @@
                 
                 <br>
                 
-                <div id="skills" class="container-fluid flex-container view">
+                <div id="skills" class="container-fluid flex-container">
                     
                     <div class="mr-3">
                         <div class="card skillCard mb-3">
@@ -610,6 +614,23 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
         <script>
+
+            var teamMembers = $( "#teamMembers" ).height();
+            var skills = $( "#skills" ).height();
+            
+            if(teamMembers > 220) {
+                document.getElementById("teamMembers").classList.add("view");
+                document.getElementById("viewMoreMembers").style.display = "block";
+            } else {
+                document.getElementById("viewMoreMembers").style.display = "none";
+            }
+
+            if(skills > 240) {
+                document.getElementById("skills").classList.add("view");
+                document.getElementById("viewMoreSkills").style.display = "block";
+            } else {
+                document.getElementById("viewMoreSkills").style.display = "none";
+            }
 
             function viewSkills() {
 
